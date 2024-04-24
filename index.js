@@ -9,8 +9,10 @@ const PORT = 4000;
 
 app.get('/',  (req, res) => {
     const hostHeader = req.headers.host; // Otteniamo l'header "Host" della richiesta
+    const originHeader = req.headers.origin; // Otteniamo l'header "Origin" della richiesta
     console.log('Host Header:', hostHeader); // Stampiamo l'header "Host" nei log del server
-    res.send(`Header Host: ${hostHeader}`); // Inviamo l'header "Host" come risposta HTTP
+    console.log('Origin Header:', originHeader); // Stampiamo l'header "Origin" nei log del server
+    res.send(`Header Host: ${hostHeader}<br>Header Origin: ${originHeader}`); // Inviamo gli header come risposta HTTP
     //res.sendFile(path.join(__dirname, "public", 'index.html')); // Invia il file HTML come risposta
 });
 
