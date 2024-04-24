@@ -15,5 +15,5 @@ app.get('/',  (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server A in esecuzione su http://localhost:${PORT}`);
+    console.log(`Server A in esecuzione...`);
 });
