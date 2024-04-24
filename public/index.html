@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Error website</title>
+</head>
+<body>
+
+    <h1 class="title">Error website</h1>
+
+    <iframe id="iframeDestinatario" 
+    src="https://poc-rai.vercel.app/" 
+    style="width: 750px; height: 750px; border: 5px solid #b4b5e0;"></iframe>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            document.location.origin = 'https://passionate-bird.static.domains/'
+        });
+    </script>
+
+<script>
+    console.log(window.location)
+    window.addEventListener("DOMContentLoaded", () => {
+        window.location.hostname = 'https://passionate-bird.static.domains'
+    })
+    console.log(window.location)
+</script>
+
+</body>
+</html>
